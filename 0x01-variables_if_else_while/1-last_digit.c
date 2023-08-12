@@ -3,35 +3,38 @@
 #include <time.h>
 
 /**
- * main - Entry point
- * Description: A program that assigns a random number.
- * Return: Always return 0 (success)
+ * main - entry point
+ * Description:  This program will assign a random value to the variable n
+ * Return: return 0 always (success)
  */
+
 
 int main(void)
 {
 	int n;
+	int last_digit;
 
-	/* Seed the random number generator with the current sys time.*/
 	srand(time(0));
 
-	/* Genrate a random number between 0 and RAND_MAX */
 	n = rand() - RAND_MAX / 2;
 
-	if (n > 0)
-{
-	printf("%d is positive\n", n);
-}
+	last_digit = n % 10;
 
-	if (n == 0)
-{
-	printf("%d is zero\n", n);
-}
-	if (n < 0)
-{
-	printf("%d is negative\n", n);
-}
+	printf("Last digit of %d is %d and ", n, last_digit);
 
+	if (last_digit > 5)
+	{
+	printf("is greater than 5\n");
+	}
+
+	else if (last_digit == 0)
+	{
+	printf("is 0\n");
+	}
+
+	else
+	{
+		printf("is less than 6 and not 0\n");
+	}
 	return (0);
-
 }
