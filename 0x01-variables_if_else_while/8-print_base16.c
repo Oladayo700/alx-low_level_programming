@@ -4,20 +4,29 @@
 
 /**
  * main - entry point
- * Description: A program that prints the alphabet in lowercase
+ * Description: A program that prints all the numbers of base 16 in lowercase
  * followed by a new line.
  * Return: return 0 always (success)
  */
 
 int main(void)
 {
-	char ch = 'z';
+	char ch = '0';
 
-	while (ch >= 'a')
+	while (ch <= '9')
 {
 	putchar(ch);
-	ch--;
+	ch++;
 }
+
+	ch = 'a';
+
+	while (ch <= 'f')
+{
+	putchar(ch);
+	ch++;
+}
+
 	putchar('\n');
 
 	return (0);
